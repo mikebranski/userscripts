@@ -1,1 +1,1 @@
-# userscripts
+A collection of userscripts made to make my life even better. Find them useful, too? That's great! Open an issue with any feedback, or fork this repo, make some changes, and submit a pull request if you think others could use it. :+1:
