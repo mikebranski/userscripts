@@ -1,11 +1,12 @@
 // ==UserScript==
 // @name         bigtime-enhancements
 // @namespace    http://mikebranski.com/
-// @version      2.1.0
+// @version      2.1.1
 // @description  Adds keyboard shortcuts and displays a running weekly total for each project.
 // @author       Mike Branski (@mikebranski)
 // @match        *.bthost.com/*
 // @grant        none
+// @homepage     https://github.com/mikebranski/userscripts
 // @updateURL    https://github.com/mikebranski/userscripts/raw/master/src/bigtime-enhancements.user.js
 // ==/UserScript==
 
