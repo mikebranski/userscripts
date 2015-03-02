@@ -1,12 +1,12 @@
 // ==UserScript==
 // @name         bigtime-enhancements
 // @namespace    http://mikebranski.com/
-// @version      2.0.2
+// @version      2.1.0
 // @description  Adds keyboard shortcuts and displays a running weekly total for each project.
 // @author       Mike Branski (@mikebranski)
 // @match        *.bthost.com/*
 // @grant        none
-// @updateURL    https://greasyfork.org/scripts/8357-bigtime-enhancements/code/bigtime-enhancements.user.js
+// @updateURL    https://github.com/mikebranski/userscripts/raw/master/src/bigtime-enhancements.user.js
 // ==/UserScript==
 
 (function(window, undefined) {
@@ -92,6 +92,36 @@
 			Mousetrap.stopCallback = function(e, element, combo) {
 				return false;
 			}
+			
+			// Go to the current week's timesheet when Cmd + Shift + C is pressed.
+			Mousetrap.bind('command+shift+c', function(e) {
+				var submission_uri;
+				
+				// @todo: Create a URL generator function so we don't need to
+				//        do this parsing silliness every time.
+				
+				// Build the URI to the current week's timesheet view.
+				current_timesheet_uri = window.location.pathname;
+				
+				// If the URI begins with a slash, remove it for now to make 
+				// splitting on slashes easier.
+				if (current_timesheet_uri.substring(0, 1) === '/') {
+					current_timesheet_uri = current_timesheet_uri.substring(1);
+				}
+				
+				// Determine the account URL identifier: split on slashes and grab 
+				// the first part, and add a leading slash.
+				current_timesheet_uri = '/' + current_timesheet_uri.split('/')[0];
+				
+				// Tack on the current week's timesheet page.
+				current_timesheet_uri += '/EAPSA_MGMT.ASP?WCI=eaMain&WCE=tplTableDef&HTML=TSWKEI.htm&ObjectType=EATimesheet';
+				
+				// And away we go!
+				window.location.href = current_timesheet_uri;
+				
+				// Flerp flerp.
+				return false;
+			});
 			
 			// Save the timesheet when Cmd + S is pressed.
 			Mousetrap.bind('command+s', function(e) {
