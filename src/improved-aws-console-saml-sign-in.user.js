@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Improved AWS Console SAML Sign-In
 // @namespace    https://signin.aws.amazon.com/saml
-// @version      2.0
+// @version      1.0
 // @description  A cleaner AWS Console SAML sign-in page! Useful for individuals who manage dozens of accounts.
 // @author       Mike Branski @mikebranski
 // @match        https://signin.aws.amazon.com/saml
