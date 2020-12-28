@@ -1,8 +1,8 @@
 // ==UserScript==
-// @name         Improved AWS Console Sign-In
+// @name         Improved AWS Console SAML Sign-In
 // @namespace    https://signin.aws.amazon.com/saml
 // @version      2.0
-// @description  A cleaner AWS Console sign-in page! Useful for individuals who manage dozens of accounts.
+// @description  A cleaner AWS Console SAML sign-in page! Useful for individuals who manage dozens of accounts.
 // @author       Mike Branski @mikebranski
 // @match        https://signin.aws.amazon.com/saml
 // @grant        none
@@ -15,7 +15,7 @@
     'use strict';
 
     const log = (...message) => {
-        console.log('[IAWSCSI]', ...message);
+        console.log('[IAWSC]', ...message);
     };
 
     let style_el = document.createElement('style');
