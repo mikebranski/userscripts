@@ -1,11 +1,12 @@
 // ==UserScript==
 // @name         Improved AWS Console SAML Sign-In
-// @namespace    https://signin.aws.amazon.com/saml
-// @version      1.0
+// @namespace    http://mikebranski.com/
+// @version      1.0.1
 // @description  A cleaner AWS Console SAML sign-in page! Useful for individuals who manage dozens of accounts.
-// @author       Mike Branski @mikebranski
+// @author       Mike Branski (@mikebranski)
 // @match        https://signin.aws.amazon.com/saml
 // @grant        none
+// @homepage     https://github.com/mikebranski/userscripts
 // ==/UserScript==
 
 // This wasn't written to be pretty or fast - I just wanted my eyes to stop 
